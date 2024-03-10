@@ -1,0 +1,19 @@
+<PreSc>:
+    MDFloatLayout:
+        orientation: 'vertical'
+        md_bg_color: utils.get_color_from_hex("#ffffff")
+        BoxLayout:
+            id: button_layout
+            size_hint_y: None
+            height: dp(48)
+
+            MDIconButton:
+                icon: "arrow-left"
+                on_release:root.retour_page_precedente()
+        BoxLayout:
+            
+        
+            MDLabel:
+                id: label
+                text: "Ceci est l'oeuvre de l'étudiant finaliste Jean-paul Muzama Mulopo, à travers une formation bien assise chez Orange Digital Center avec le coach Daniel Omotete"
+        

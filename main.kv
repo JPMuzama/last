@@ -1,0 +1,37 @@
+#: include chat/chatgpt.kv
+#: include intro/intro.kv
+#: include login/login.kv
+#: include login/accueil/accueil.kv
+#: include preface/preface.kv
+
+
+#: import IntroScreen intro.intro_screen.IntroScreen
+#: import Gpt chat.chatgpt.Gpt
+#: import LoginScreen login.loginSc.LoginScreen
+#: import AccueilSc login.accueil.accueilScreen.AccueilSc
+#: import PreSc preface.prefaceScreen.PreSc
+
+
+#: import utils kivy.utils
+
+<WindowManager>:
+    id: screen_mgr
+    screen_mgr:screen_mgr
+
+    IntroScreen:
+        manager: screen_mgr
+        name : "first"
+    LoginScreen:
+        manager: screen_mgr
+        name : "second"
+    AccueilSc:
+        manager: screen_mgr
+        name : "enter"
+    Gpt:
+        manager: screen_mgr
+        name : "go_chat"
+    PreSc:
+        manager: screen_mgr
+        name : "pref"
+
+    

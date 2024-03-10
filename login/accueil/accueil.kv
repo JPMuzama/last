@@ -1,0 +1,30 @@
+<AccueilSc>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        md_bg_color: 'white'
+        Widget:
+        Button:
+            background_color: "#8ECAE6"
+            on_release: root.chater()
+            text: "[b][size=25]Commencer[/size][/b]"
+            markup: True
+            theme_text_color: "blue"
+            text_color: 1, 1, 1, 1  # Couleur personnalisée (blanc ici)
+            size_hint: None, None
+            size: 200, 70  # Modifiez la taille ici (largeur, hauteur)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centrer le bouton
+
+        Widget:
+        Button:
+            background_color: "#8ECAE6"
+            on_release: root.preface()
+            text: "[b][size=25]En savoir plus[/size][/b]"
+            markup: True
+            theme_text_color: "blue"
+            text_color: 1, 1, 1, 1  # Couleur personnalisée (blanc ici)
+            size_hint: None, None
+            size: 200, 70  # Modifiez la taille ici (largeur, hauteur)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centrer le bouton
+
+        Widget:
+

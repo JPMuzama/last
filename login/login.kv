@@ -1,0 +1,48 @@
+<LoginScreen>:
+    MDFloatLayout:
+        md_bg_color: 'white'
+        MDBoxLayout:
+            orientation: "vertical"
+            padding: dp(20)
+            Widget:
+                size_hint: 1,None
+                height: dp(50)
+            Image:
+                source: "image/lock_icon.png"
+                size_hint: 1,None
+                height: dp(100)
+
+            MDLabel:
+                text: "[size=30][b] Connexion[/b][/size]"
+                markup: True
+                halign: "center"
+
+            MDLabel: 
+                text: "[size=20][b]Profitez de l'I.A. gratuit[/b][/size]"
+                markup: True
+                halign: "center"
+
+            MDTextField:
+                mode: "outlined"
+                on_text: root.saisie_username(self.text)
+                hint_text: "nom d'utilisateur"
+                icon_left: "account-box-outline"
+            Widget:
+            MDTextField:
+                mode: "outlined"
+                on_text: root.saisie_mot_de_passe(self.text)
+                hint_text: "Mot de passe"
+                icon_left: "lock-outline"
+            Widget:
+            Button:
+                background_color: "#8ECAE6"
+                on_release: root.valider()
+                text: "[b][size=25]Confirmer[/size][/b]"
+                markup: True
+                theme_text_color: "blue"
+                text_color: 1, 1, 1, 1  # Couleur personnalisée (blanc ici)
+                size_hint: None, None
+                size: 200, 70  # Modifiez la taille ici (largeur, hauteur)
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centrer le bouton
+            
+            Widget:
